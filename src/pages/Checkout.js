@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../component/Header'
 
 function Checkout() {
   return (
-    <div>Checkout</div>
+    <div>
+      <Header/>
+    </div>
   )
 }
 
