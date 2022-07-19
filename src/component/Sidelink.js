@@ -1,8 +1,11 @@
 import { ShoppingBasket } from '@mui/icons-material'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useStateValue} from './StateProvider'
+
 
 function Sidelink() {
+  const [{basket}] = useStateValue();
   return (
     <>
       <Link to='/login' className='header__link'>
@@ -29,7 +32,7 @@ function Sidelink() {
 <Link to='/checkout' className='header__link'>
 <div className='header__optionBasket'>
     <ShoppingBasket/>
-    <span className='header__optionLineTwo header__basketCount'>0</span>
+    <span className='header__optionLineTwo header__basketCount'>{basket.length}</span>
     
 </div>
 </Link>
