@@ -7,7 +7,7 @@ function CheckoutProduct({id, title, image, price, rating}) {
         <div className='checkoutProduct__info'>
             <p className='checkoutProduct__title'>
                 {title}
-                console.log(title);
+               
             </p>
 
             <p className='checkoutProduct__price'>
