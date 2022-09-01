@@ -1,5 +1,11 @@
 export const initialState = {
-    basket: [],
+    basket: [{
+        id:'12345',
+        title : 'Net10 Alcatel TCL A3, 32GB',
+        price:39.40,
+        rating:3,
+        image:'https://m.media-amazon.com/images/I/61-fB+GkifL._AC_SX679_.jpg'
+    },],
     user: null
 };
 
