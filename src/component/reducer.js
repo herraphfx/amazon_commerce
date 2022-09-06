@@ -28,6 +28,19 @@ function reducer(state, action) {
             break;
         case 'REMOVE_FROM_BASKET':
             //Logic for removing
+            let newBasket = [...state.basket];
+
+            const index = state.basket.findIndex((basketItem) => basketItem.id = action.id);
+
+            if(index >= 0){
+                    // item exisrs in basket
+                    newBasket.splice(index, 1);
+            }else{
+                console.warn(
+                    `Cant remove product (id: ${action.id})`
+                )
+            }
+
             return { ...state }
             break;
         default:
