@@ -1,15 +1,20 @@
 import React from 'react'
 import Header from '../component/Header'
 import { useStateValue } from '../component/StateProvider'
+import Subtotal from '../component/Subtotal';
 import './Checkout.css'
 import CheckoutProduct from './CheckoutProduct';
+import CurrencyFormat from 'react-currency-format';
 
 function Checkout() {
   const [{basket}] = useStateValue();
 
   return (
-    <div className='checkout'>
+    <div>
       <Header/>
+    <div className='checkout'>
+      
+      <div className='checkout__left'>
       <img className='checkout__ad' 
       src='' 
       alt=''/>
@@ -36,6 +41,14 @@ function Checkout() {
         )}
       </div>
      )}
+     </div>
+     {basket.length > 0 && (
+      <div className='checkout__right'>
+        <h1>Subtotal</h1>
+        <Subtotal/>
+        </div>
+     )}
+    </div>
     </div>
   )
 }
