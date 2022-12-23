@@ -34,9 +34,10 @@ function reducer(state, action) {
 
             //we check to see if product exist
             const index = state.basket.findIndex((basketItem) => basketItem.id = action.id);
+                
 
             if(index >= 0){
-                    // item exisrs in basket
+                    // item exists in basket
                     newBasket.splice(index, 1);
             }else{
                 console.warn(
